@@ -13,10 +13,6 @@
         Number of Star: <input type="text" name="star" value="<?php echo $_POST["star"]; ?>"> <button>Go</button>
     </form>
 
-    <div>
-        data : <?php echo $_POST["star"]; ?>
-    </div>
-
     <?php
 
 
@@ -36,7 +32,7 @@
     // ***
     // **
     // *
-    $numStar = $_POST["star"];
+    $numStar = $_POST["star"] ?? "";
     if (($numStar % 2) == 0) { // เลขคู่ หารเอาเศษ = 0 
         // คู่
         for ($row1 = 1; $row1 <= $numStar; $row1++) { //row
